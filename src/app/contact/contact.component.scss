@@ -1,0 +1,97 @@
+@media (max-width: 1150px) {
+
+    .contact-main,
+    .address,
+    .footer {
+        padding-inline: 60px
+    }
+}
+
+@media (max-width: 1050px) {
+    .address {
+        flex-direction: column-reverse;
+        padding-block: 60px;
+    }
+
+    .social {
+        margin-bottom: 48px;
+    }
+}
+
+
+@media (max-width: 1000px) {
+
+    .contact-main,
+    .address,
+    .footer {
+        padding-inline: 40px
+    }
+}
+
+@media (max-width: 700px) {
+    .section {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        width: 100%;
+    }
+
+    .message-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 524px) {
+
+    .contact-main,
+    .address,
+    .footer {
+        padding-inline: 30px;
+    }
+
+    .email-box {
+        width: 220px;
+    }
+
+    .footer {
+        p {
+            font-size: 13px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .contact-main {
+        h1 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        button {
+            padding-inline: 60px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .footer {
+        p {
+            font-size: 11px;
+        }
+    }
+}
+
+input.ng-invalid.ng-touched {
+    border: 2px red solid;
+}
+
+input.ng-valid {
+    border: 2px green solid;
+}
+
+form.ng-submitted {
+    input.ng-invalid {
+        border: 2px red solid;
+    }
+}

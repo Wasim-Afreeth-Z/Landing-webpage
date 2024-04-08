@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --black-color: #292e3d;
+    --white-color: white;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin-top: 65px;
+    font-family: "Work Sans", sans-serif;
+}
+
+@media (max-width: 524px) {
+    body {
+        margin-top: 60px;
+    }
+}
+
+.active{
+    color: rgba(249, 153, 93, 1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background:#2947a9;
+    border-radius: 10px;
+}
+
+

@@ -1,0 +1,63 @@
+<div id="project" class="project-main px-[80px] mt-12 mb-20">
+    <h1 class="text-3xl text-[#292e3d] font-bold mb-6">Projects</h1>
+    <div class="project flex justify-between">
+        <div class="filter" name="filter" id="filter">
+            <!-- (click)="filterProjects($event)" -->
+            <!-- [(ngModel)]="filter" -->
+            <div class="group flex items-center mb-3 ">
+                <div class="line w-[5px] h-[24px] rounded-full mr-3 group-hover:bg-[#2947a9] group-focus:bg-[#2947a9]">
+                </div>
+                <button value="all" 
+                    class="text-[#c2c7d6] font-medium text-2xl group-hover:text-[#2947a9] group-focus:bg-[#2947a9]">All
+                </button>
+            </div>
+            <div class="group flex items-center mb-3 ">
+                <div class="line2 w-[5px] h-[24px] rounded-full mr-3 group-hover:bg-[#2947a9] group-focus:bg-[#2947a9]">
+                </div>
+                <button value="commercial"  
+                    class="text-[#c2c7d6] font-medium text-2xl group-hover:text-[#2947a9] group-focus:bg-[#2947a9]">
+                    Commercial</button>
+            </div>
+            <div class="group flex items-center mb-3 ">
+                <div class="line3 w-[5px] h-[24px] rounded-full mr-3 group-hover:bg-[#2947a9] group-focus:bg-[#2947a9]">
+                </div>
+                <button value="residential"
+                    class="text-[#c2c7d6] font-medium text-2xl group-hover:text-[#2947a9] group-focus:bg-[#2947a9]">
+                    Residental</button>
+            </div>
+            <div class="group flex items-center mb-3 ">
+                <div class="line4 w-[5px] h-[24px] rounded-full mr-3 group-hover:bg-[#2947a9] group-focus:bg-[#2947a9]">
+                </div>
+                <button value="other" 
+                    class="text-[#c2c7d6] font-medium text-2xl group-hover:text-[#2947a9] group-focus:bg-[#2947a9]">
+                    Other</button>
+            </div>
+        </div>
+
+        <div>
+            <div class="grid grid-cols-2 gap-6 full-box">
+                @for (project of projectList; track $index) {
+                <div class="w-[290px] box">
+                    <img class="w-full  h-[200px]" src={{project.image}} alt="">
+                    <div class="bg-[#2947a9] text-white p-2">
+                        <h1 class="mb-1 font-bold text-base">{{project.topic}}</h1>
+                        <p class="text-[13px] mb-2">{{project.address}}</p>
+                    </div>
+                </div>
+                }
+            </div>
+
+            <div class="flex mt-6 items-center">
+                <button
+                    class="bg-[#292e3d] text-sm text-white w-full py-3 flex items-center justify-center gap-2 border-r-[1px]"><img
+                        src="../../assets/images/right.svg" width="22px"> Back
+                </button>
+                <img class="h-[10px] mx-5 pagecontrol" src="../../assets/images/projects/PageControl.png" alt="">
+                <button class="bg-[#292e3d] text-sm text-white w-full py-3 flex items-center justify-center gap-2"> Next
+                    <img src="../../assets/images/left.svg" width="22px">
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>

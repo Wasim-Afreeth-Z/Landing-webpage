@@ -1,0 +1,111 @@
+<div id="contact" class="contact-main text-[#292e3d] bg-[#f6f8f7] py-14 px-[80px]">
+    <h1 class="text-3xl font-bold mb-4 text-center">What can us do for you?</h1>
+    <p class="max-w-[450px] text-center leading-5 mx-auto">We are ready to work on a project of any complexity, whether
+        it’s commercial or residential.</p>
+
+    <form class="main-form mt-7 flex flex-col justify-center items-center" (ngSubmit)=" form.valid" #form="ngForm">
+        <div class="section grid grid-cols-2 w-[550px] gap-x-8 gap-y-5 " #messageGroup="ngModelGroup"
+            ngModelGroup="message">
+            <!--name -->
+            <div>
+                <input class="border-2 p-2 w-full rounded-md placeholder:font-medium outline-none" type="text"
+                    placeholder="Your Name*" id="name" name="name" [(ngModel)]="registrationModel.name" required
+                    #name="ngModel">
+                @if ((form.submitted &&name?.invalid )|| (name?.touched&&name?.invalid)) {
+                <p class="text-red-500 text-sm !mt-2 !mb-0">*Enter your Name</p>
+                }
+            </div>
+            <!-- email -->
+            <div>
+                <input class="border-2 p-2  w-full  rounded-md placeholder:font-medium outline-none" type="email"
+                    placeholder="Email*" id="email" name="email" [(ngModel)]="registrationModel.email" required email
+                    #email="ngModel">
+                @if ((form.submitted &&email?.invalid )|| email?.touched) {
+                @if (email?.errors?.['required']) {
+                <p class="text-red-500 text-sm !mt-2 !mb-0">*Enter your Email</p>
+                }
+                @if (email?.errors?.['email']) {
+                <p class="text-red-500 text-sm !mt-2 !mb-0">*Enter correct Email</p>
+                }
+                }
+            </div>
+            <!-- reason -->
+            <div>
+                <input class="border-2 p-2 w-full rounded-md placeholder:font-medium outline-none" type="text"
+                    placeholder="Reason for Contacting*" id="reason" name="reason"
+                    [(ngModel)]="registrationModel.reason" required #reason="ngModel">
+                @if ((form.submitted &&reason?.invalid )|| (reason?.touched&&reason?.invalid)) {
+                <p class="text-red-500 text-sm !mt-2 !mb-0">*Enter your Reason</p>
+                }
+            </div>
+            <!-- phone -->
+            <div>
+                <input class="border-2 p-2 w-full rounded-md placeholder:font-medium outline-none" type="tel"
+                    placeholder="Phone*" id="phonenumber" name="phonenumber" [(ngModel)]="registrationModel.phone"
+                    required maxlength="10" minlength="10" #phone="ngModel">
+                @if ((form.submitted &&phone?.invalid )|| phone?.touched) {
+                @if (phone?.errors?.['required']) {
+                <p class="text-red-500 text-sm !mt-2 !mb-0">*Enter your Phone Number</p>
+                }
+                @if (phone?.errors?.['maxlength']) {
+                <p class="text-red-500 text-sm !mt-2 !mb-0">*Enter correct Number</p>
+                }
+                @if (phone?.errors?.['minlength']) {
+                <p class="text-red-500 text-sm !mt-2 !mb-0">*Enter correct Number</p>
+                }
+                }
+            </div>
+        </div>
+
+        <!-- message -->
+        <div class="message-box mb-6 section-3 col-span-2 w-[550px]">
+            <textarea class="border-2 p-2 w-full rounded-md mt-5 placeholder:font-medium outline-none" rows="4"
+                cols="50" placeholder="Message" rows="4" cols="50"></textarea>
+            @if ((form.submitted &&messageGroup?.invalid )|| (messageGroup?.touched&&messageGroup?.invalid)) {
+            <p class="text-red-500 !mt-2 !mb-0">*indicates a required field</p>
+            }
+        </div>
+
+        <button class="bg-[#2947a9] rounded-[4px] text-white  px-20 py-2 hover:bg-blue-400">Submit</button>
+    </form>
+</div>
+
+<div class="address p-[80px] flex justify-between">
+    <div>
+        <p class="text-[#2947a9] font-semibold mb-6">ADDRESS: <span class="text-black font-normal ml-2">6391 Elgin St.
+                Celina, Delaware 10299</span></p>
+        <p class="text-[#2947a9] font-semibold mb-6">PHONE: <span class="text-black font-normal ml-6">+84 1102
+                2703</span>
+        </p>
+        <p class="text-[#2947a9] font-semibold mb-6">EMAIL: <span
+                class="text-black font-normal ml-8">hello&commat;theboX.com</span></p>
+        <div class="flex items-center">
+            <img src="../../assets/images/logo.png" alt="" width="32px">
+            <h1 class="text-[#2947a9] font-bold text-[28px] ml-3"><span class="italic">The</span>Box</h1>
+        </div>
+    </div>
+
+    <div>
+        <p class="text-[#2947a9] font-semibold mb-4">NEWSLETTER:</p>
+        <div class="flex mb-8 max-[410px]:flex-col">
+            <input class="email-box border-2 p-2  w-[300px] mb-2  rounded-md outline-none mr-2" type="email"
+                placeholder="Your email here" id="email" name="email">
+            <button class="bg-[#f9995d] text-white px-5 w-36 h-[45px] rounded-md">Subscribe</button>
+        </div>
+
+        <p class="text-[#2947a9] font-semibold mb-4">SOCIAL:</p>
+        <div class="social flex gap-x-4 items-center">
+            <a href="#" class="text-[#292e3d] text-4xl"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"
+                class="text-white bg-[#292e3d] w-[36.5px] h-[36.5px] flex justify-center items-center rounded-full text-xl"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"
+                class="text-white bg-[#292e3d] w-[36.5px] h-[36.5px] flex justify-center items-center rounded-full text-xl"><i
+                    class="fa-brands fa-twitter"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="footer bg-[#2947a9] text-white px-[80px] py-[20px]">
+    <p class="font-light text-[15px]">TheBox Company © 2022. All Rights Reserved</p>
+</div>

@@ -1,0 +1,39 @@
+<!-- header -->
+<!-- desktop header -->
+<nav class="desktop-header">
+    <ul class="nav-bar">
+        <div class="flex">
+            <img src="../../assets/images/logo.png" alt="" width="35px">
+            <h1 class="desktop"><span class="italic">The</span>Box</h1>
+        </div>
+        <div class="header-left">
+            <li class="header home" (click)="home()" routerLinkActive="active">Home</li>
+            <li class="header about" (click)="about()" routerLinkActive="active">About Us</li>
+            <li class="header projects" (click)="project()" routerLinkActive="active">Projects</li>
+            <li class="header services" (click)="service()" routerLinkActive="active">Services</li>
+            <li class="header contact" (click)="contact()" routerLinkActive="active" > Contact Us</li>
+        </div>
+    </ul>
+</nav>
+
+<!-- mobile-header -->
+<nav class="mobile-header">
+    <div class="mobile-nav">
+        <div class="control flex">
+            <div class="flex">
+                <img class="header-img" src="../../assets/images/logo.png" alt="" width="35px">
+                <h1 class="desktop"><span class="italic">The</span>Box</h1>
+            </div>
+            <div class="control-right">
+                <div id="three-bar" class="three-bar" (click)="openMenu()"><i class={{menuIcon}}></i></div>
+            </div>
+        </div>
+        <ul class="mobile-drop-down " [class.mobile-drop-down]="menuValue">
+            <li class="header2 home" (click)="home()" routerLinkActive="active">Home</li>
+            <li class="header2 about" (click)="about()" routerLinkActive="active">About Us</li>
+            <li class="header2 projects" (click)="project()" routerLinkActive="active">Projects</li>
+            <li class="header2 services" (click)="service()" routerLinkActive="active">Services</li>
+            <li class="header2 contact" (click)="contact()" routerLinkActive="active" > Contact Us</li>
+        </ul>
+    </div>
+</nav>

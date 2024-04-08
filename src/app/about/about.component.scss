@@ -1,0 +1,167 @@
+@media (max-width: 1150px) {
+    .about-main {
+        padding-inline: 60px
+    }
+
+    .about-img {
+        width: 800px;
+    }
+
+    .about-box {
+        width: 380px;
+        top: 70px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-box {
+        width: 430px;
+        top: 460px;
+        left: 220px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .about-main {
+        margin-bottom: 400px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .about-main {
+        padding-inline: 40px
+    }
+}
+
+
+@media (max-width: 880px) {
+    .about-img {
+        width: 700px;
+    }
+
+    .about-box {
+        left: 170px;
+    }
+
+    .about-main {
+        margin-bottom: 450px;
+    }
+}
+
+@media (max-width: 770px) {
+    .about-img {
+        width: 600px;
+    }
+
+    .about-box {
+        width: 430px;
+        left: 125px;
+        top: 400px;
+    }
+}
+
+@media (max-width: 680px) {
+    .about-img {
+        width: 500px;
+    }
+
+    .about-box {
+        width: 380px;
+        left: 100px;
+        top: 320px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 580px) {
+    .about-img {
+        width: 400px;
+    }
+
+    .about-box {
+        width: 300px;
+        left: 90px;
+        top: 270px;
+        padding-block: 35px;
+        padding-inline: 25px;
+    }
+
+    h1 {
+        font-size: 25px;
+        margin-bottom: 12px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 13px;
+        margin-top: 30px;
+    }
+
+    .about-main {
+        margin-bottom: 400px;
+    }
+}
+
+@media (max-width: 524px) {
+    .about-main {
+        padding-inline: 30px;
+    }
+
+    .about-box {
+        left: 80px;
+    }
+}
+
+@media (max-width: 460px) {
+    .about-img {
+        width: 300px;
+    }
+
+    .about-box {
+        width: 250px;
+        left: 55px;
+        top: 190px;
+        padding-block: 25px;
+        padding-inline: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .about-img {
+        width: 250px;
+    }
+
+    .about-box {
+        width: 200px;
+        left: 55px;
+        top: 150px;
+        padding-block: 25px;
+        padding-inline: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .about-main {
+        margin-bottom: 460px;
+    }
+}
